@@ -15,23 +15,36 @@ def validarAlfabeto(texto):
     Salidas: 
     -Un desgloce de la URL ingresada
     """
-    validacion = True
-    for i in texto: 
-        if i == "":
-            return False
-        else:
-            return validacion
-def codigoEucaliptoES(opcion):
-
-    if opcion == 1:
-        texto = input("Ingrese el texto sin cifrar: ")
+    if texto == "":
+        return 'a'
+    elif texto.isalnum() or (texto.isalpha and not(texto.isalpha())):
+        return 'b'
+    elif not(texto.isalnum()):
+        return 'c'
     else:
-        texto = input("Ingrese el texto  cifrado: ")
-
-    if validarAlfabeto(texto):
-        print(procesarCodigoEucalipto(texto,opcion))
-    else:
-        codigoEucaliptoES(opcion)
+        return True
+    
+def codificarEucaliptoES():    
+    texto = input("Ingrese la palabra sin cifrar: ")
+    if validarAlfabeto(texto) == True:
+        print(codificarEucalipto(texto))        
+    elif validarAlfabeto(texto) == "a":
         print("Debe escribir una palabra")
-    codigoEucaliptoES(2)
-codigoEucaliptoES(1)
+        if input("Ingrese 0 para salir: ") == 0:
+            return""
+        else:
+            codificarEucaliptoES()
+    elif validarAlfabeto(texto) == "b":
+        print("El texto ingresado tiene número y no los podemos codificar")
+        if input("Ingrese 0 para salir: ") == 0:
+            return""
+        else:
+            codificarEucaliptoES()
+    elif validarAlfabeto(texto) == "c":
+        print("Los caracteres especiales no se pueden codificar")
+        if input("Ingrese 0 para salir: ") == 0:
+            return""
+        else:
+            codificarEucaliptoES()
+            
+codificarEucaliptoES()
