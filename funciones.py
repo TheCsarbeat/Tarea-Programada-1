@@ -78,7 +78,6 @@ def descifrarMorse(texto):
     texto = texto.lower()
     resultado=""
     caracteres = texto.split("^")
-    print(caracteres)
     for i in caracteres:
         if i in morse:
             resultado+= str(alfabeto[morse.index(i)])
@@ -141,21 +140,50 @@ def limpiarUltimoCaracter(texto):
     """
     return texto[:len(texto)-1]
 
-def leerBitacora():
+def buscarBitacora():
+    """
+    Funcionamiento: Determina si el archiv de bitácora existe.
+    Entradas: 
+    -NA
+    Salidas:
+    -True: si el archivo existe
+    -False: si no existe
+    """       
     try:
-        bitacora = open("bitacora.txt","r")
+        bitacora = open("Bitácora.txt","r")
+        bitacora.close()
         return True
     except:
         return False
+        
 def añadirBitacora(proceso,entrada,salida):
+    """
+    Funcionamiento: Agrega al archivo bitacora un nuevo registro.
+    Entradas: 
+    -proceso(string): El nombre del proceso que se ejecutó
+    -entrada(string): La entrada que recibió el procesos ejecutado.
+    -salida(string): La respuesta del proceso ejecutado.
+    Salidas:
+    -Una nueva línea en el archivo de bitácora.
+    """       
     now = datetime.now()
-    if leerBitacora():
-        bitacora = open("bitacora.txt","a")
+    if buscarBitacora():
+        bitacora = open("Bitácora.txt","a")
         bitacora.write(now.strftime("%H:%M:%S")+"\t"+proceso+": entrada("+entrada+"), salida("+salida+")\n")
+        bitacora.close()
+    else:
+        crearBitacora()
+        añadirBitacora(proceso,entrada,salida)
+    return ""
 
 def crearBitacora():
-
-    
-    bitacora = open("Bitacora.txt","w")
-    
+    """
+    Funcionamiento: Crea el archivo de texto bitácora.
+    Entradas: 
+    -NA
+    Salidas:
+    -Un arcivho tipo txt llamado bitácora.
+    """       
+    bitacora = open("Bitácora.txt","w")
     bitacora.close()
+    return""
