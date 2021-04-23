@@ -6,18 +6,13 @@
 
 from funciones import *
 from validaciones import *
-from datetime import datetime
-def bitacora(proceso,entrada,salida):
-    ahora = datetime.now()
-    bitacora = open("Bitacora.txt","w")
-    bitacora.write("A las "+str(ahora.time())+" se ejecutó \t"+proceso+": entrada("+entrada+"), salida("+salida+")\n")
-    bitacora.close()
+
 #----------------------------------------------------------------------#
 #                           Entrada/Salida                             #
 #----------------------------------------------------------------------#
 
 #---CÓDIGO EUCALIPTO
-def encriptarEucaliptoES():
+def cifrarEucaliptoES():
     """
     Funcionamiento: Se encarga de la entrada, salida y validación de datos, además de mostrar un mensaje si ocurre un error
     Entradas:
@@ -34,11 +29,11 @@ def encriptarEucaliptoES():
     elif not validarLetras(texto):
         print("No deben de haber caracteres especiales, ni números.")
     else:
-        print("El código encriptado es: "+codificarEucalipto(texto))
-        bitacora("Encriptar-Eucalipto",texto,codificarEucalipto(texto))
+        print("El código encriptado es: "+cifrarEucalipto(texto))
+        añadirBitacora("Encriptar-Eucalipto",texto,descifrarEucalipto(texto))
     return False
 
-def desencriptarEucaliptoES():
+def descifrarEucaliptoES():
     """
     Funcionamiento: Se encarga de la entrada, salida y validación de datos, además de mostrar un mensaje si ocurre un error
     Entradas:
@@ -55,11 +50,11 @@ def desencriptarEucaliptoES():
     elif not validarDesencriptarEucalipto(texto):
         print("Tiene un caracter inválido de códficar.")
     else:
-        print("El código desencriptado es: "+decodificarEucalipto(texto))
+        print("El código desencriptado es: "+descifrarEucalipto(texto))
     return False
 
 #---CÓDIGO MORSE
-def encriptarMorseES():
+def cifrarMorseES():
     """
     Funcionamiento: Se encarga de la entrada, salida y validación de datos, además de mostrar un mensaje si ocurre un error
     Entradas:
@@ -76,11 +71,11 @@ def encriptarMorseES():
     elif not validarMorseEncriptacion(texto):
         print("No deben de haber caracteres especiales o usa un caracter que no existe en morse.")
     else:
-        print("El código encriptado es: "+encriptarMorse(texto))
+        print("El código encriptado es: "+cifrarMorse(texto))
 
     return False
 
-def desencriptarMorseES():
+def descifrarMorseES():
     """
     Funcionamiento: Se encarga de la entrada, salida y validación de datos, además de mostrar un mensaje si ocurre un error
     Entradas:
@@ -97,13 +92,12 @@ def desencriptarMorseES():
     elif not validarMorseDesencriptacion(texto):
         print("No sigue el formato de morse, los caracteres válidos son: '.-^|'")        
     else:
-        print("El código encriptado es: "+desencriptarMorse(texto))
-    desencriptarMorseES() 
+        print("El código encriptado es: "+descifrarMorse(texto))
     return False
 
 
 ##SUFAMELICO
-def encriptarSufamelicoES():
+def cifrarSufamelicoES():
     """
     Funcionamiento: Se encarga de la entrada, salida y validación de datos, además de mostrar un mensaje si ocurre un error
     Entradas:
@@ -123,7 +117,7 @@ def encriptarSufamelicoES():
         print("El código encriptado es: "+codigoSufamelico(texto))
     return False
 
-def desencriptarSufamelicoES():
+def descifrarSufamelicoES():
     """
     Funcionamiento: Se encarga de la entrada, salida y validación de datos, además de mostrar un mensaje si ocurre un error
     Entradas:
@@ -140,6 +134,3 @@ def desencriptarSufamelicoES():
     else:
         print("El código desencriptado es: "+codigoSufamelico(texto))
     return False
-
-encriptarSufamelicoES()
-desencriptarSufamelicoES()

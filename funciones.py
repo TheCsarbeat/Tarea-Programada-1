@@ -1,8 +1,8 @@
 #no se códifican los espacios porque los acout no hablan en espacios espacios ocupan un letras leer
 #Se mantien la robustez  ya que es la misma función codifica y decodifica, sin la necesecidad de pasar un paramentro o darle
 #  más de una tarea a una funcion , sin segmentar la funcion en dos tareas 
-
-def codificarEucalipto(texto):
+from datetime import datetime
+def cifrarEucalipto(texto):
     """
     Funcionamiento: Encripta el texto ingresado en código eucalipto
     Entradas:
@@ -22,7 +22,7 @@ def codificarEucalipto(texto):
             resultado+= i
     return resultado
 
-def decodificarEucalipto(texto):
+def descifrarEucalipto(texto):
     """
     Funcionamiento: Desencripta el texto ingresado en código eucalipto
     Entradas:
@@ -42,7 +42,7 @@ def decodificarEucalipto(texto):
             resultado+= i    
     return resultado
 
-def encriptarMorse(texto):
+def cifrarMorse(texto):
     """
     Funcionamiento: Encripta el texto ingresado en código morse
     Entradas:
@@ -64,7 +64,7 @@ def encriptarMorse(texto):
     resultado = limpiarUltimoCaracter(resultado)
     return resultado
 
-def desencriptarMorse(texto):
+def descifrarMorse(texto):
     """
     Funcionamiento: Encripta el texto ingresado en código morse
     Entradas:
@@ -132,5 +132,30 @@ def codigoSufamelico(texto):
     return impresion
 
 def limpiarUltimoCaracter(texto):
-
+    """
+    Funcionamiento: Se encarga de eliminar el último caracter de una cadena de texto
+    Entradas: 
+    -texto(string): la variable a utilizar
+    Salidas:
+    -retorna el texto sin el último caracter
+    """
     return texto[:len(texto)-1]
+
+def leerBitacora():
+    try:
+        bitacora = open("bitacora.txt","r")
+        return True
+    except:
+        return False
+def añadirBitacora(proceso,entrada,salida):
+    ahora = datetime.now()
+    if leerBitacora():
+        bitacora = open("bitacora.txt","a")
+        bitacora.write(+str(ahora.time())+" se ejecutó \t"+proceso+": entrada("+entrada+"), salida("+salida+")\n")
+
+def crearBitacora():
+
+    
+    bitacora = open("Bitacora.txt","w")
+    
+    bitacora.close()
