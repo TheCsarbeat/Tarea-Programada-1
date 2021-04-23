@@ -51,7 +51,7 @@ def validarLetras(texto):
 
 
 
-def validarDesencriptarEucalipto(texto):
+def validarEucaliptoDescifrar(texto):
     """
     Funcionamiento: Determina si es válido para desencriptarlo
     Entradas:
@@ -68,7 +68,7 @@ def validarDesencriptarEucalipto(texto):
     return True
 
 
-def validarMorseEncriptacion(texto):
+def validarMorseCifrar(texto):
     """
     Funcionamiento: Determina si es texto, sin caracteres especiales, solo alfanúmericos y espacios
     Entradas:
@@ -86,7 +86,7 @@ def validarMorseEncriptacion(texto):
             return False
     return True
 
-def validarMorseDesencriptacion(texto):
+def validarMorseDescifrar(texto):
     """
     Funcionamiento: Determina si es texto, sin caracteres especiales, solo alfanúmericos y espacios
     Entradas:

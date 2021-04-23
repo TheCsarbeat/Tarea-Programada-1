@@ -47,7 +47,7 @@ def descifrarEucaliptoES():
         print("Debe ingresar un texto")
     elif  validarEspacios(texto):
         print("La cadena no contiene un mensaje a codificar.")
-    elif not validarDesencriptarEucalipto(texto):
+    elif not validarEucaliptoDescifrar(texto):
         print("Tiene un caracter inválido de códficar.")
     else:
         print("El código desencriptado es: "+descifrarEucalipto(texto))
@@ -68,7 +68,7 @@ def cifrarMorseES():
         print("Debe ingresar un texto")
     elif  validarEspacios(texto):
         print("La cadena no contiene un mensaje a codificar.")
-    elif not validarMorseEncriptacion(texto):
+    elif not validarMorseCifrar(texto):
         print("No deben de haber caracteres especiales o usa un caracter que no existe en morse.")
     else:
         print("El código encriptado es: "+cifrarMorse(texto))
@@ -89,7 +89,7 @@ def descifrarMorseES():
         print("Debe ingresar un texto")
     elif  validarEspacios(texto):
         print("La cadena no contiene un mensaje a codificar.")
-    elif not validarMorseDesencriptacion(texto):
+    elif not validarMorseDescifrar(texto):
         print("No sigue el formato de morse, los caracteres válidos son: '.-^|'")        
     else:
         print("El código encriptado es: "+descifrarMorse(texto))

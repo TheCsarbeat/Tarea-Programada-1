@@ -148,10 +148,10 @@ def leerBitacora():
     except:
         return False
 def añadirBitacora(proceso,entrada,salida):
-    ahora = datetime.now()
+    now = datetime.now()
     if leerBitacora():
         bitacora = open("bitacora.txt","a")
-        bitacora.write(+str(ahora.time())+" se ejecutó \t"+proceso+": entrada("+entrada+"), salida("+salida+")\n")
+        bitacora.write(now.strftime("%H:%M:%S")+"\t"+proceso+": entrada("+entrada+"), salida("+salida+")\n")
 
 def crearBitacora():
 
