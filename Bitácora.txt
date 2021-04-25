@@ -16,3 +16,6 @@
 14:01:36	Eucalipto-Descifrar: entrada(anastasio), salida(anastasio)
 14:02:06	Eucalipto-Cifrar: entrada(anastasio), salida(4n4s84s69)
 14:02:12	Eucalipto-Descifrar: entrada(4n4s84s69), salida(anastasio)
+16:52:35	Deletreo-Cifrar: entrada(picha), salida(p)
+17:03:44	Deletreo-Cifrar: entrada(papaya), salida(p)
+17:06:19	Murcielago-Cifrar: entrada(estupefaciente), salida(5st1p5f7345nt5)

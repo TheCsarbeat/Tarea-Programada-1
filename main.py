@@ -240,6 +240,7 @@ def descifrarSufamelicoES():
 #descifrarDeletreoES()
 
 def menu():
+    clear_screen()
     print("#---------------------------------------------------------------#")
     print("  Convertidor de español a códigos, claves y señales de pista")
     print("#---------------------------------------------------------------#")

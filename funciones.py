@@ -3,6 +3,7 @@
 #Última modificación:14/04/2021 03:39  p.m.
 #Versión: 3.8.2
 from datetime import datetime
+import os
 def cifrarMurcielago(texto):
     """
     Funcionamiento: cifra el texto al código murciélago usado por los scouts
@@ -70,11 +71,11 @@ def cifrarDeletreo(texto):
     """
     impresion = ""
     texto = texto.lower()
-    code = ["alfa","bravo","charlie","delta","echo","foxtrot","golf","hotel","india","juliet","kilo","lima","mike","november","oscar",\
-        "papa","quebec","romeo","sierra","tango","uniform","victor","whisky","xray","yanqui","zulú"]
+    code = ["Alfa","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar",\
+        "Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whisky","Xray","Yanqui","Zulú"]
     for i in texto:
         for j in code:
-            if i == j[0]:
+            if i == j[0].lower():
                 impresion+=j
                 impresion+="~"
     impresion = limpiarUltimoCaracter(impresion)
@@ -275,4 +276,7 @@ def crearBitacora():
     """       
     bitacora = open("Bitácora.txt","w")
     bitacora.close()
-    return"" 
+    return""
+
+def clear_screen():
+    os.system('cls')
