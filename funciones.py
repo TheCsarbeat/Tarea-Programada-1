@@ -287,3 +287,5 @@ def clearScreen():
     -El comando del cmd "cls" el cual se encarga de limpiar la pantalla
     """
     return os.system('cls')
+
+

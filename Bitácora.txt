@@ -24,3 +24,6 @@
 19:35:39	Deletreo-Descifrar: entrada(Echo~Sierra~Tango~Uniform~Papa~Echo~Foxtrot~Alfa~Charlie~Tango~Oscar), salida(estupefacto)
 19:36:00	Morse-Cifrar: entrada(a maynor le gusta leslie), salida(.-|--^.-^-.--^-.^---^.-.|.-..^.|--.^..-^...^-^.-|.-..^.^...^.-..^..^.)
 19:36:12	Morse-Descifrar: entrada(.-|--^.-^-.--^-.^---^.-.|.-..^.|--.^..-^...^-^.-|.-..^.^...^.-..^..^.), salida(a maynor le gusta leslie)
+21:08:28	Murcielago-Cifrar: entrada(ola enorme), salida(967*5n9205)
+21:21:43	CenitPolar-Cifrar: entrada(casa blanca), salida(pisi¬bnilpi)
+21:39:26	Deletreo-Cifrar: entrada(Paulita), salida(p)
