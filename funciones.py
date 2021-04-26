@@ -272,11 +272,18 @@ def crearBitacora():
     Entradas: 
     -NA
     Salidas:
-    -Un arcivho tipo txt llamado bitácora.
+    -Un archivo tipo txt llamado bitácora.
     """       
     bitacora = open("Bitácora.txt","w")
     bitacora.close()
     return""
 
-def clear_screen():
-    os.system('cls')
+def clearScreen():
+    """
+    Funcionamiento: Limpia la pantalla de la consola.
+    Entradas: 
+    -NA
+    Salidas:
+    -El comando del cmd "cls" el cual se encarga de limpiar la pantalla
+    """
+    return os.system('cls')

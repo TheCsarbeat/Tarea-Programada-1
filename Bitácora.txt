@@ -19,3 +19,8 @@
 16:52:35	Deletreo-Cifrar: entrada(picha), salida(p)
 17:03:44	Deletreo-Cifrar: entrada(papaya), salida(p)
 17:06:19	Murcielago-Cifrar: entrada(estupefaciente), salida(5st1p5f7345nt5)
+19:34:04	Eucalipto-Cifrar: entrada(onta bebe), salida(9n84°b1b1)
+19:35:22	Deletreo-Cifrar: entrada(estupefacto), salida(e)
+19:35:39	Deletreo-Descifrar: entrada(Echo~Sierra~Tango~Uniform~Papa~Echo~Foxtrot~Alfa~Charlie~Tango~Oscar), salida(estupefacto)
+19:36:00	Morse-Cifrar: entrada(a maynor le gusta leslie), salida(.-|--^.-^-.--^-.^---^.-.|.-..^.|--.^..-^...^-^.-|.-..^.^...^.-..^..^.)
+19:36:12	Morse-Descifrar: entrada(.-|--^.-^-.--^-.^---^.-.|.-..^.|--.^..-^...^-^.-|.-..^.^...^.-..^..^.), salida(a maynor le gusta leslie)
