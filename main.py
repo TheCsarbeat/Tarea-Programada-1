@@ -92,7 +92,7 @@ def cifrarDeletreoES():
         print("Solo puede ser una palabra, únicamente letras")
     else:
         print("El código cifrado es: "+cifrarDeletreo(texto))
-        añadirBitacora("Deletreo-Cifrar",texto,descifrarDeletreo(texto))
+        añadirBitacora("Deletreo-Cifrar",texto,cifrarDeletreo(texto))
 def descifrarDeletreoES():
     """
     Funcionamiento: pide al usuario el texto a descifrar

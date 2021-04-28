@@ -27,3 +27,4 @@
 21:08:28	Murcielago-Cifrar: entrada(ola enorme), salida(967*5n9205)
 21:21:43	CenitPolar-Cifrar: entrada(casa blanca), salida(pisi¬bnilpi)
 21:39:26	Deletreo-Cifrar: entrada(Paulita), salida(p)
+21:04:19	Eucalipto-Cifrar: entrada(hola abuelita), salida(h954°4b215684)

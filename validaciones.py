@@ -6,9 +6,9 @@
 #Validaciones generales
 def validarVacio(texto):
     """
-    Funcionamiento: Determina si la valiarble es vacía
+    Funcionamiento: Determina si la variable es vacía
     Entradas:
-    -texto(string): la varaiable a validar 
+    -texto(string): la variable a validar 
     Salidas: 
     -True: si no es vacio
     -False: si es vacío
