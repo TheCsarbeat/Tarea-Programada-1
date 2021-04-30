@@ -1,0 +1,3 @@
+12:12:01	Sufamélico-Descifrar: entrada(asdfasdfasdf), salida(fudafudafuda)
+12:12:09	Sufamélico-Descifrar: entrada(picha con queso), salida(plohf ocn qsmuc)
+12:12:34	Sufamélico-Descifrar: entrada(por fin esta lista esta picha), salida(pcr aln mutf ilutf mutf plohf)
