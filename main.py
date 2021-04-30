@@ -250,7 +250,7 @@ def menu():
         if opcion1 == 7:
             return ""
         elif opcion1 <= 6 and opcion1 > 0:
-            opcion2 = input("1.Cifrar\n2.Descifrar\n\nSelecione la opción que dese   e: ")
+            opcion2 = input("1.Cifrar\n2.Descifrar\n\nSelecione la opción que desee: ")
             if validarEntero(opcion2):
                 opcion2 = int(opcion2)
                 if opcion2 <= 2 and opcion2 > 0:
