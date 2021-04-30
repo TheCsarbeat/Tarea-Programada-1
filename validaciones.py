@@ -1,15 +1,14 @@
-#Elaborado por: Maynor Martínez 2021052792
-#Fecha de Creación: 21/04/2021 5:30 pm 
-#Fecha de última Modificación: 
-#Versión: 3.9.2
+#Creado por: César Jiménez Salazar
+#Fecha de realización:21/04/2021 05:57 p.m.
+#Última modificación:21/04/2021 11:11  p.m.
+#Versión: 3.8.2
 
-    ##Validaciones generales 
-
+#Validaciones generales
 def validarVacio(texto):
     """
-    Funcionamiento: Determina si la valiarble es vacía
+    Funcionamiento: Determina si la variable es vacía
     Entradas:
-    -texto(string): la varaiable a validar 
+    -texto(string): la variable a validar 
     Salidas: 
     -True: si no es vacio
     -False: si es vacío
@@ -18,7 +17,6 @@ def validarVacio(texto):
         return True
     else:
         return False
-
 def validarEspacios(texto): 
     """
     Funcionamiento: Determina si la variable contiene solo espacios
@@ -32,25 +30,88 @@ def validarEspacios(texto):
         return True
     else:
         return False
-
 def validarLetras(texto):
     """
-    Funcionamiento: Determina si es texto, sin caracteres especiales ni números, solo letras y espacios
+    Funcionamiento: Determina si es texto, sin caracteres especiales ni números, solo letras, espacios,
+    comas, y puntos.
     Entradas:
-    -texto(string): La varaiable a validar 
+    -texto(string): La variable a validar 
     Salidas: 
-    -True: Si es solo texto
+    -True: Si es solo texto, (,) o (.)
     -False: En cualquier otro caso
     """
     for i in texto:
         if (i.isalpha()== False) and not(i in ",. "):
             return False
-        elif i.isalpha == False:
+    return True
+def validarEntero(num):
+    """
+    Funcionamiento: Determina si el número es connveritble a  un entero
+    Entradas:
+    -num(string): Una cadena de texto con la posibilidad de ser entero
+    Salidas: 
+    -True si el número sí es entero
+    -False si el número no fuese entero. 
+    """
+    try:
+        num = int(num)
+        if num > 0:
+            return True
+    except ValueError:
+        return False
+#Validaciones de funciones de procesamiento
+def validarMurcielago(texto):
+    """
+    Funcionamiento: Determina si es texto, letras, numeros, asteriscos, comas, y puntos.
+    Entradas:
+    -texto(string): La variable a validar
+    Salidas: 
+    -True: si contiene unicamente letras, numeros, asteriscos, comas, y puntos.
+    -False: En cualquier otro caso
+    """
+    for i in texto:
+        if (i.isalnum()== False) and not(i in ",.*"):
             return False
     return True
-
-
-
+def validarCenit(texto):
+    """
+    Funcionamiento: Determina si es texto, letras, (¬), comas, y puntos.
+    Entradas:
+    -texto(string): La variable a validar
+    Salidas: 
+    -True: si contiene unicamente letras, (¬), comas, y puntos.
+    -False: En cualquier otro caso
+    """
+    for i in texto:
+        if (i.isalpha()== False) and not(i in ",.¬"):
+            return False
+    return True
+def validarDeletreoCifrar(texto):
+    """
+    Funcionamiento: Determina si solo contiene letras
+    Entradas:
+    -texto(string): La variable a validar
+    Salidas: 
+    -True: si contiene unicamente letras
+    -False: En cualquier otro caso
+    """
+    for i in texto:
+        if not i.isalpha():
+            return False
+    return True
+def validarDeletreoDescifrar(texto):
+    """
+    Funcionamiento: Determina si solo contiene letras
+    Entradas:
+    -texto(string): La variable a validar
+    Salidas: 
+    -True: si contiene unicamente letras o (~)
+    -False: En cualquier otro caso
+    """
+    for i in texto:
+        if (i.isalpha()== False) and not(i == "~"):
+            return False
+    return True
 def validarEucaliptoDescifrar(texto):
     """
     Funcionamiento: Determina si es válido para desencriptarlo
@@ -66,8 +127,6 @@ def validarEucaliptoDescifrar(texto):
         elif i == "0":
             return False
     return True
-
-
 def validarMorseCifrar(texto):
     """
     Funcionamiento: Determina si es texto, sin caracteres especiales, solo alfanúmericos y espacios
@@ -85,7 +144,6 @@ def validarMorseCifrar(texto):
             print(i)
             return False
     return True
-
 def validarMorseDescifrar(texto):
     """
     Funcionamiento: Determina si es texto, sin caracteres especiales, solo alfanúmericos y espacios
