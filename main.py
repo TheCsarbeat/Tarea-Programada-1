@@ -233,6 +233,7 @@ def descifrarSufamelicoES():
     return False
 
 def menu():
+    clearScreen()
     print("#---------------------------------------------------------------#")
     print("  Convertidor de español a códigos, claves y señales de pista")
     print("#---------------------------------------------------------------#")
@@ -249,7 +250,7 @@ def menu():
         if opcion1 == 7:
             return ""
         elif opcion1 <= 6 and opcion1 > 0:
-            opcion2 = input("Desea\n1.Cifrar\n2.Descifrar\n")
+            opcion2 = input("1.Cifrar\n2.Descifrar\n\nSelecione la opción que dese   e: ")
             if validarEntero(opcion2):
                 opcion2 = int(opcion2)
                 if opcion2 <= 2 and opcion2 > 0:
