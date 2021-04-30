@@ -1,9 +1,10 @@
-#Creado por: César Jiménez Salazar
-#Fecha de realización:21/04/2021 05:57 p.m.
-#Última modificación:21/04/2021 11:11  p.m.
-#Versión: 3.8.2
-
-#Validaciones generales
+#Creado por: César Jiménez Salazar, Maynor Martínez
+#Fecha de realización: 14/04/2021 06:00 p.m.
+#Última modificación: 29/04/2021 11:43  p.m.
+#Versión: 3.9.2
+#----------------------------------------------------------------------#
+#                         VALIDACIONES GENERALES                       #
+#----------------------------------------------------------------------#
 def validarVacio(texto):
     """
     Funcionamiento: Determina si la variable es vacía
@@ -59,7 +60,9 @@ def validarEntero(num):
             return True
     except ValueError:
         return False
-#Validaciones de funciones de procesamiento
+#----------------------------------------------------------------------#
+#                  VALIDACIONES DE PROCESAMIENTO                       #
+#----------------------------------------------------------------------#
 def validarMurcielago(texto):
     """
     Funcionamiento: Determina si es texto, letras, numeros, asteriscos, comas, y puntos.
